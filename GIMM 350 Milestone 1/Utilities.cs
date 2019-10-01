@@ -352,3 +352,45 @@ class RenFairePerson : Person
         Console.Write("Huzzah!");
     }
 }
+
+//This is an example of how a do while loop works you first you tell it what to do and then you feed it a while condition so the do part will run before it checks the while condition
+//The while loop and do while loop are exactly the same
+int counter = 0;
+do
+{
+    Console.WriteLine($"Hello World! The counter is {counter}");
+    counter++;
+} while (counter< 10);
+
+
+//This searches the list for the specified choice and then makes an if statement to determine if the index in the list
+//is not at -1 because -1 would be a non-existent item in the list
+var index = names.IndexOf("Felipe");
+if (index != -1) {
+    Console.WriteLine($"The name {names[index]} is at index {index}");
+
+    var notFound = names.IndexOf("Not Found");
+Console.WriteLine($"When an item is not found, IndexOf returns {notFound}");
+}
+
+//This sorts the names to an alphabetical sellection
+names.Sort();
+foreach (var name in names) {
+    Console.WriteLine($"Hello {name.ToUpper()}!");
+}
+
+//This creates a new list that has 1 and 1
+var fibonacciNumbers = new List<int> { 1, 1 };
+
+//This while loop goes throught and adds up the list following the fibonacci sequence
+while (fibonacciNumbers.Count< 20) {
+    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];
+var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];
+
+fibonacciNumbers.Add(previous + previous2);
+}
+
+//This prints the list
+foreach(var item in fibonacciNumbers) {
+    Console.WriteLine(item);
+}
